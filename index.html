@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Cost of Waiting</title>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg: #0b3d2e;          
+      --card: rgba(255,255,255,0.08);
+      --text: #f3f6f4;
+      --muted: rgba(243,246,244,0.75);
+      --border: rgba(255,255,255,0.14);
+      --shadow: 0 18px 55px rgba(0,0,0,0.25);
+      --radius: 18px;
+    }
+
+    *{ box-sizing: border-box; }
+
+    body{
+      margin: 0;
+      font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      background: radial-gradient(circle at 20% 10%, rgba(255,255,255,0.08), transparent 40%),
+                  radial-gradient(circle at 80% 30%, rgba(0,0,0,0.20), transparent 45%),
+                  var(--bg);
+      color: var(--text);
+      line-height: 1.4;
+    }
+
+    header{
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
+      padding: 56px 18px 30px;
+      text-align: center;
+    }
+
+    .title-wrap{
+      max-width: 860px;
+      padding: 34px 22px;
+      background: rgba(0,0,0,0.18);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(6px);
+    }
+
+    h1{
+      margin: 0;
+      font-size: clamp(34px, 5vw, 62px);
+      letter-spacing: 0.5px;
+    }
+
+    .subtitle{
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: clamp(14px, 2vw, 18px);
+    }
+
+    .scroll-hint{
+      margin-top: 26px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: rgba(243,246,244,0.85);
+      font-size: 14px;
+    }
+
+    .dot{
+      width: 10px;
+      height: 10px;
+      border-radius: 99px;
+      background: rgba(243,246,244,0.75);
+      animation: pulse 1.2s infinite ease-in-out;
+    }
+
+    @keyframes pulse{
+      0%,100%{ transform: scale(1); opacity: .65; }
+      50%{ transform: scale(1.35); opacity: 1; }
+    }
+
+    /* Story sections */
+    main{
+      padding: 0 18px 90px;
+    }
+
+    .section{
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 70px 0;
+      border-top: 1px solid rgba(255,255,255,0.10);
+    }
+
+    .beat{
+      display: grid;
+      gap: 18px;
+      justify-items: center;
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .beat h2{
+      margin: 0;
+      font-size: clamp(22px, 3vw, 32px);
+    }
+
+    .beat p{
+      margin: 0;
+      max-width: 720px;
+      color: var(--muted);
+      font-size: 16px;
+    }
+
+    .panel-card{
+      width: min(920px, 100%);
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .panel-card img{
+      width: 100%;
+      display: block;
+      height: auto;
+    }
+
+    .caption{
+      padding: 16px 18px 18px;
+      color: rgba(243,246,244,0.85);
+      font-size: 14px;
+      border-top: 1px solid rgba(255,255,255,0.10);
+    }
+
+    footer{
+      text-align: center;
+      padding: 40px 18px 60px;
+      color: rgba(243,246,244,0.70);
+      font-size: 13px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="title-wrap" data-aos="zoom-in" data-aos-duration="900">
+      <h1>The Cost of Waiting</h1>
+      <p class="subtitle">
+        A short scroll story made by maitha alshamsi
+      </p>
+      <div class="scroll-hint" data-aos="fade-up" data-aos-delay="350">
+        
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <section class="section">
+      <div class="beat" data-aos="fade-up" data-aos-duration="800">
+        <h2>1) “I’ll do it tomorrow.”</h2>
+        <p>
+          It starts small: one task, one message, one decision… postponed.
+        </p>
+      </div>
+
+      <div class="panel-card" data-aos="fade-right" data-aos-duration="900">
+        <img src="panel 1.png" alt="Panel 1" />
+        <div class="caption">Panel 1 — The first delay feels harmless.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="beat" data-aos="flip-up" data-aos-duration="850">
+        <h2>2) Tomorrow turns into “next week.”</h2>
+        <p>
+          Waiting adds up. The longer it sits, the heavier it feels to start.
+        </p>
+      </div>
+
+      <div class="panel-card" data-aos="fade-left" data-aos-duration="900">
+        <img src="panel 2.png" alt="Panel 2" />
+        <div class="caption">Panel 2 — The gap gets bigger… and starting gets harder.</div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="beat" data-aos="zoom-in-up" data-aos-duration="850">
+        <h2>3) The moment passes.</h2>
+        <p>
+          Sometimes, waiting doesn’t just delay life — it changes what’s possible.
+        </p>
+      </div>
+
+      <div class="panel-card" data-aos="fade-up" data-aos-duration="900">
+        <img src="panel 3.png" alt="Panel 3" />
+        <div class="caption">Panel 3 — The cost of waiting is what you miss.</div>
+      </div>
+    </section>
+
+  </main>
+
+ 
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 800,
+      once: false,  
+      offset: 120
+    });
+  </script>
+</body>
+</html>
